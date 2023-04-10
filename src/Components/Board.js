@@ -1,27 +1,14 @@
-import Card from "./Card";
+import Tier from "./Tier";
 
-function Board({}) {
+function Board() {
   return (
     <div className="Board">
-      <div className="Row">
-        <div className="Label">S</div>
-        <Card />
-      </div>
-      <div className="Row">
-        <div className="Label">A</div>
-      </div>
-      <div className="Row">
-        <div className="Label">B</div>
-      </div>
-      <div className="Row">
-        <div className="Label">C</div>
-      </div>
-      <div className="Row">
-        <div className="Label">D</div>
-      </div>
-      <div className="Row">
-        <div className="Label">F</div>
-      </div>
+      <Tier tierName="S" />
+      <Tier tierName="A" />
+      <Tier tierName="B" />
+      <Tier tierName="C" />
+      <Tier tierName="D" />
+      <Tier tierName="F" />
     </div>
   );
 }

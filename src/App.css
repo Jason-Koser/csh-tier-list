@@ -16,7 +16,7 @@
     background-color: rgb(30, 30, 30);
 }
 
-.Row {
+.Tier {
     display: flex;
     width: stretch;
     height: 16%;

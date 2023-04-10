@@ -1,11 +1,5 @@
-
-const Card = (props) => {
-  return (
-    <div className="Card" id={id} draggable="true">
-      Hello
-      {id}
-    </div>
-  );
-}
+const Card = (Props) => {
+  return <div className="Card" draggable="true"></div>;
+};
 
 export default Card;
