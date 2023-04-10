@@ -17,6 +17,7 @@
 }
 
 .Row {
+    display: flex;
     width: stretch;
     height: 16%;
     background-color: rgb(56,56,56);
@@ -33,3 +34,11 @@
     color: black;
     background-color: rgb(5, 184, 5);
 }
+
+.Card {
+    display: flex;
+    height: 100%;
+    width: 100px;
+    background-color: white;
+}
+

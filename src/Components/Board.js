@@ -1,8 +1,11 @@
-function Board() {
+import Card from "./Card";
+
+function Board({}) {
   return (
     <div className="Board">
       <div className="Row">
         <div className="Label">S</div>
+        <Card />
       </div>
       <div className="Row">
         <div className="Label">A</div>
