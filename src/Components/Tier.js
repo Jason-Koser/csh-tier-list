@@ -4,7 +4,7 @@ function Tier(props) {
 
   return (
     <div className="Tier">
-      <div className="Label">{props.tierName}</div>
+      <div className="Label" style={{backgroundColor: props.color}}>{props.tierName}</div>
       <Card />
     </div>
   );
