@@ -1,4 +1,5 @@
 import Board from "./Board";
+import CardList from "./CardList";
 
 function BoardGroup() {
   const boardName = "Best Bodega Mac And Cheese";
@@ -12,6 +13,7 @@ function BoardGroup() {
       <h3>Template made by @{templateAuthor}</h3>
       <p>{description}</p>
       <Board />
+      <CardList />
     </div>
   );
 }

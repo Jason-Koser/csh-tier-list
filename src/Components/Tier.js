@@ -2,8 +2,7 @@ import { useState } from "react";
 import Card from "./Card";
 
 function Tier(props) {
-  let cardList = [{ imagePath: "../assets/mac.jpg", description: "Mac & Cheese" }];
-  const [cards, setCards] = useState(cardList);
+  const [cards, setCards] = useState([]);
 
   return (
     <div className="Tier">
