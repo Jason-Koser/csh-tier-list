@@ -2,7 +2,7 @@ import { useState } from "react";
 import Card from "./Card";
 
 function Tier(props) {
-  let cardList = [{ image: "src/assets/mac.jpg", description: "Mac & Cheese" }];
+  let cardList = [{ imagePath: "../assets/mac.jpg", description: "Mac & Cheese" }];
   const [cards, setCards] = useState(cardList);
 
   return (
@@ -12,7 +12,7 @@ function Tier(props) {
       </div>
       {cards.map((item) => (
         <Card
-          image={item.image}
+          imagePath={item.imagePath}
           key={item.description}
           description={item.description}
         />
