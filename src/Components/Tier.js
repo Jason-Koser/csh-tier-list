@@ -1,4 +1,3 @@
-import React from "react";
 import { useState } from "react";
 import Card from "./Card";
 
@@ -7,13 +6,13 @@ function Tier(props) {
 
   function handleDragOver(event) {
     event.preventDefault();
-    console.log(`Over tier ${props.tierName}`);
   }
 
   function handleOnDrop(event) {
-    const cardTransfered = event.dataTransfer.getData("Card Key");
-    setCards(cards.concat(cardTransfered));
-    console.log("Card", cardTransfered);
+    event.preventDefault();
+
+    let cardTransferred = JSON.parse(event.dataTransfer.getData("card"));
+    setCards(cards.concat(cardTransferred));
   }
 
   return (

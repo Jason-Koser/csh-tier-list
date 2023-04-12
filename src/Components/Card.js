@@ -1,14 +1,14 @@
-
-
-const Card = (props) => {
+const Card = ({ imagePath, description }) => {
   function handleDragStart(event) {
-    event.dataTransfer.setData("Card Key", props.key);
-    console.log("Drag Start");
+    event.dataTransfer.setData(
+      "Card",
+      JSON.stringify({ imagePath, description })
+    );
   }
 
   return (
     <div className="Card" draggable="true" onDragStart={handleDragStart}>
-      <img src={props.imagePath} alt={props.description} width={100} />
+      <img src={imagePath} alt={description} width={100} />
     </div>
   );
 };
