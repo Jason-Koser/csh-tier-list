@@ -18,11 +18,11 @@ function Header() {
         <ul className="navbar-nav mr-auto">
           <li className="nav-item active">
             <h6 className="nav-link">
-              <span className="sr-only">(current)</span>
+              .<span className="sr-only">(current)</span>
             </h6>
           </li>
           <li className="nav-item">
-            <h6 className="nav-link"></h6>
+            <h6 className="nav-link">.</h6>
           </li>
         </ul>
       </div>
