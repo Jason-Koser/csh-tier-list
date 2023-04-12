@@ -1,9 +1,7 @@
 function Header() {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
-      <a href="#" className="navbar-brand">
-        Tierlists
-      </a>
+      <h6 className="navbar-brand">Tierlists</h6>
       <button
         className="navbar-toggler"
         type="button"
@@ -19,14 +17,12 @@ function Header() {
       <div className="collapse navbar-collapse" id="navbarColor01">
         <ul className="navbar-nav mr-auto">
           <li className="nav-item active">
-            <a href="#" className="nav-link">
-              Library<span className="sr-only">(current)</span>
-            </a>
+            <h6 className="nav-link">
+              <span className="sr-only">(current)</span>
+            </h6>
           </li>
           <li className="nav-item">
-            <a href="#" className="nav-link">
-              Create New
-            </a>
+            <h6 className="nav-link"></h6>
           </li>
         </ul>
       </div>
