@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Card from "./Card";
+import { useDroppable } from "@dnd-kit/core";
 
 const CardList = (props) => {
   let cardList = [
@@ -28,8 +29,16 @@ const CardList = (props) => {
       description:
         "Bob Evans makes a mean mac and cheese. Good flavor, simple texture, and good value. ",
     },
-    { imagePath: "../assets/CrackerBarrel1.jpg", description: "Cracker Barrel turned out to be way better than I thought. It had a very nice touch of added breadcrumbs that I defenitly enjoyed" },
-    { imagePath: "../assets/CrackerBarrel2.jpg", description: "This is just like the Sharp White Cheddar Cracker Barrel, but I prefer the white cheddar. Enough so too that this gets bumped down a tier" },
+    {
+      imagePath: "../assets/CrackerBarrel1.jpg",
+      description:
+        "Cracker Barrel turned out to be way better than I thought. It had a very nice touch of added breadcrumbs that I defenitly enjoyed",
+    },
+    {
+      imagePath: "../assets/CrackerBarrel2.jpg",
+      description:
+        "This is just like the Sharp White Cheddar Cracker Barrel, but I prefer the white cheddar. Enough so too that this gets bumped down a tier",
+    },
     {
       imagePath: "../assets/Devour1.jpg",
       description:
@@ -55,12 +64,26 @@ const CardList = (props) => {
       description:
         "I literally could not finish this mac & cheese. Everything was fine, but the cheese flavor was just awful. The only upside was atleast it was a meaty portion.",
     },
-    { imagePath: "../assets/Panera2.jpg", description: "I do not know how but the brocoli made this mac & cheese so much better than the non-brocoli counterpart. Nothing like some good cheesy brocoli" },
-    { imagePath: "../assets/Stoufers.jpg", description: "This is literally the most plain and boring mac & cheese you can get. Nothing really good about it, but also nothing bad. As well as it being middle of the pack in terms of value as well." },
-    { imagePath: "../assets/Velveeta.jpg", description: "Velveeta is just a worse version of Kraft what can I say. " },
+    {
+      imagePath: "../assets/Panera2.jpg",
+      description:
+        "I do not know how but the brocoli made this mac & cheese so much better than the non-brocoli counterpart. Nothing like some good cheesy brocoli",
+    },
+    {
+      imagePath: "../assets/Stoufers.jpg",
+      description:
+        "This is literally the most plain and boring mac & cheese you can get. Nothing really good about it, but also nothing bad. As well as it being middle of the pack in terms of value as well.",
+    },
+    {
+      imagePath: "../assets/Velveeta.jpg",
+      description: "Velveeta is just a worse version of Kraft what can I say. ",
+    },
   ];
-  
+
   const [cards] = useState(cardList);
+  const { setNodeRef } = useDroppable({
+    id: "CardList",
+  });
 
   return (
     <div className="card border-primary mb-3">

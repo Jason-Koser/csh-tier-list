@@ -1,8 +1,12 @@
 import { useState } from "react";
 import Card from "./Card";
+import { useDroppable } from "@dnd-kit/core";
 
 function Tier(props) {
   const [cards, setCards] = useState([]);
+  const {setNodeRef} = useDroppable({
+    id: props.tierName,
+  });
 
   function handleDragOver(event) {
     event.preventDefault();
