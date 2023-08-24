@@ -59,6 +59,7 @@ const CardList = (props) => {
     { imagePath: "../assets/Stoufers.jpg", description: "This is literally the most plain and boring mac & cheese you can get. Nothing really good about it, but also nothing bad. As well as it being middle of the pack in terms of value as well." },
     { imagePath: "../assets/Velveeta.jpg", description: "Velveeta is just a worse version of Kraft what can I say. " },
   ];
+  
   const [cards] = useState(cardList);
 
   return (
