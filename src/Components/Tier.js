@@ -8,19 +8,8 @@ function Tier(props) {
     id: props.tierName,
   });
 
-  function handleDragOver(event) {
-    event.preventDefault();
-  }
-
-  function handleOnDrop(event) {
-    event.preventDefault();
-
-    let cardTransferred = JSON.parse(event.dataTransfer.getData("card"));
-    setCards(cards.concat(cardTransferred));
-  }
-
   return (
-    <div className="Tier" onDrop={handleOnDrop} onDragOver={handleDragOver}>
+    <div className="Tier">
       <div className="Label" style={{ backgroundColor: props.color }}>
         {props.tierName}
       </div>
