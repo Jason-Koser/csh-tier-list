@@ -1,3 +1,4 @@
+import { DndContext } from "@dnd-kit/core";
 import Board from "./Board";
 import CardList from "./CardList";
 
@@ -8,13 +9,15 @@ function BoardGroup() {
   const templateAuthor = "koser";
 
   return (
-    <div className="BoardGroup">
-      <h1>{boardName}</h1>
-      <h3>Template made by @{templateAuthor}</h3>
-      <p>{description}</p>
-      <Board />
-      <CardList />
-    </div>
+    <DndContext>
+      <div className="BoardGroup">
+        <h1>{boardName}</h1>
+        <h3>Template made by @{templateAuthor}</h3>
+        <p>{description}</p>
+        <Board />
+        <CardList />
+      </div>
+    </DndContext>
   );
 }
 
