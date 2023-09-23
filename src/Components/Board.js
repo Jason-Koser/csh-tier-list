@@ -1,6 +1,7 @@
 import Tier from "./Tier";
 
 function Board() {
+
   return (
     <div className="Board">
       <Tier tierName="S" color="red" />

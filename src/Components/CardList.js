@@ -1,9 +1,8 @@
-import { useState } from "react";
 import Card from "./Card";
 import { useDroppable } from "@dnd-kit/core";
 
 const CardList = (props) => {
-  let cardList = [
+  let cards = [
     {
       imagePath: "../assets/Annies1.jpg",
       description:
@@ -80,14 +79,18 @@ const CardList = (props) => {
     },
   ];
 
-  const [cards] = useState(cardList);
+  function addCard(card) {
+    cards[cards.length] = card;
+    console.log("card added", card);
+  }
+
   const { setNodeRef } = useDroppable({
     id: "CardList",
   });
 
   return (
     <div className="card border-primary mb-3">
-      <div className="CardList">
+      <div className="CardList" ref={setNodeRef}>
         {cards.map((item) => (
           <Card
             imagePath={item.imagePath}

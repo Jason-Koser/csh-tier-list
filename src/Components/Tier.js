@@ -1,18 +1,19 @@
-import { useState } from "react";
 import Card from "./Card";
 import { useDroppable } from "@dnd-kit/core";
 
 function Tier(props) {
-  const [cards, setCards] = useState([]);
   const {setNodeRef} = useDroppable({
     id: props.tierName,
   });
 
+  const cards = [];
+
   return (
-    <div className="Tier">
+    <div className="Tier" ref={setNodeRef}>
       <div className="Label" style={{ backgroundColor: props.color }}>
         {props.tierName}
       </div>
+      <div>
       {cards.map((item) => (
         <Card
           imagePath={item.imagePath}
@@ -20,6 +21,7 @@ function Tier(props) {
           description={item.description}
         />
       ))}
+      </div>
     </div>
   );
 }
