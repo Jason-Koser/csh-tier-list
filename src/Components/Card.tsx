@@ -1,9 +1,11 @@
 import { useDraggable } from "@dnd-kit/core";
 import { CSS } from "@dnd-kit/utilities";
+import React from "react";
+import { CardObj } from "./BoardGroup";
 
-const Card = ({ imagePath, description }) => {
+const Card = (cardProperty:CardObj) => {
   const { attributes, listeners, setNodeRef, transform } = useDraggable({
-    id: imagePath,
+    id: cardProperty.imagePath,
   });
 
   const style = {
@@ -18,7 +20,7 @@ const Card = ({ imagePath, description }) => {
       {...listeners}
       {...attributes}
     >
-      <img src={imagePath} alt={description} width={100} />
+      <img src={cardProperty.imagePath} alt={cardProperty.description} width={100} />
     </div>
   );
 };

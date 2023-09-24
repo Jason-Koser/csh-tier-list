@@ -1,23 +1,24 @@
+import React from "react";
 import Card from "./Card";
 import { useDroppable } from "@dnd-kit/core";
+import { CardObj } from "./BoardGroup";
 
-function Tier(props) {
+function Tier({tierName, color}: {tierName:string, color:string}) {
   const {setNodeRef} = useDroppable({
-    id: props.tierName,
+    id: tierName,
   });
 
-  const cards = [];
+  const cards:CardObj[] =[];
 
   return (
     <div className="Tier" ref={setNodeRef}>
-      <div className="Label" style={{ backgroundColor: props.color }}>
-        {props.tierName}
+      <div className="Label" style={{ backgroundColor: color }}>
+        {tierName}
       </div>
       <div>
       {cards.map((item) => (
         <Card
           imagePath={item.imagePath}
-          key={item.description}
           description={item.description}
         />
       ))}

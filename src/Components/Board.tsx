@@ -1,3 +1,4 @@
+import React from "react";
 import Tier from "./Tier";
 
 function Board() {
